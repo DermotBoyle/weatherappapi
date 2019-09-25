@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 120px;
+}
+
+.card {
+  -webkit-box-shadow: 10px 7px 51px 12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 7px 51px 12px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 7px 51px 12px rgba(0, 0, 0, 0.75);
+}
+
+button {
+  height: 4rem;
+  width: 9rem;
+}
+
+.imageIcon {
+  height: 3rem;
+}
+
+h5 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
