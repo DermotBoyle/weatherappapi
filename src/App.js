@@ -7,9 +7,6 @@ import {
   DropdownItem,
   Button
 } from "reactstrap";
-import Madrid from "./components/Madrid";
-import Berlin from "./components/berlin";
-import London from "./components/london";
 
 class WeatherWaavi extends Component {
   constructor() {
@@ -70,7 +67,7 @@ class WeatherWaavi extends Component {
     });
     let result = Asc.sort((a, b) => a - b);
     this.setState({
-      weather: result
+      sortedNums: result
     });
   };
 
@@ -205,7 +202,7 @@ class WeatherWaavi extends Component {
             ))}
           </div>
           <div style={{ display: "block", padding: "0 1rem" }}>
-            <h5>desceding</h5>
+            <h5>descending</h5>
             {sortedNumsDown.map(num => (
               <p>Max-Temp :{Math.round(num)}</p>
             ))}
