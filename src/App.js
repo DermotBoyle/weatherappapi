@@ -7,7 +7,6 @@ import {
   DropdownItem,
   Button
 } from "reactstrap";
-import Hooks from "./hooks";
 import Madrid from "./components/Madrid";
 import Berlin from "./components/berlin";
 import London from "./components/london";
@@ -71,7 +70,7 @@ class WeatherWaavi extends Component {
     });
     let result = Asc.sort((a, b) => a - b);
     this.setState({
-      sortedNums: result
+      weather: result
     });
   };
 
