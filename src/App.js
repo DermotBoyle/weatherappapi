@@ -100,7 +100,7 @@ class WeatherWaavi extends Component {
     console.log(city);
     return (
       <>
-        <h1 style={{ textAlign: "center", paddingTop: "3rem" }}>weather app</h1>
+        <h1 style={{ textAlign: "center", paddingTop: "3rem" }}>Weather app</h1>
         <div className="container">
           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle caret>Cities</DropdownToggle>
@@ -136,12 +136,14 @@ class WeatherWaavi extends Component {
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <Button onClick={this.handleSortAsc} style={{ height: "3rem" }}>
-            Sort Asc.
-          </Button>
-          <Button onClick={this.handleSortDesc} style={{ height: "3rem" }}>
-            Sort Desc.
-          </Button>
+          <div className="sortBTN">
+            <Button onClick={this.handleSortAsc} style={{ height: "3rem" }}>
+              Sort Asc.
+            </Button>
+            <Button onClick={this.handleSortDesc} style={{ height: "3rem" }}>
+              Sort Desc.
+            </Button>
+          </div>
           <div style={{ width: "min-content" }}>
             <Button onClick={() => this.handleFilterClima("c")}>
               Filter Clear days!
@@ -184,11 +186,15 @@ class WeatherWaavi extends Component {
               ))}
               {/* <h5>Average Temp of 3 days: {Math.round(result)} </h5> */}
               {result ? (
-                <Button onClick={this.handleAverageTemp}>
+                <Button className="avgBTN" onClick={this.handleAverageTemp}>
                   Average Temp : {Math.round(result)}{" "}
                 </Button>
               ) : (
-                <Button onClick={this.handleAverageTemp}>
+                <Button
+                  className="avgBTN"
+                  style={{ width: "auto" }}
+                  onClick={this.handleAverageTemp}
+                >
                   {" "}
                   Click here for Average Temperature
                 </Button>

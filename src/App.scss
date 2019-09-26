@@ -9,6 +9,19 @@
   padding-top: 120px;
 }
 
+.avgBTN {
+  width: auto !important;
+}
+
+.avgBTN:hover {
+  width: auto !important;
+}
+
+.sortBTN {
+  display: flex;
+  flex-direction: column;
+}
+
 .card {
   -webkit-box-shadow: 10px 7px 51px 12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 7px 51px 12px rgba(0, 0, 0, 0.75);
